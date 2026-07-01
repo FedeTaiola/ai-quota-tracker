@@ -327,7 +327,15 @@ function bindCards(){
     });
     s.addEventListener('change', function(){
       const a = accounts.find(x=>x.id===this.dataset.iqs);
-      if(a){ a.quotaPercent = parseInt(this.value); save(accounts); }
+      if(a){ 
+        a.quotaPercent = parseInt(this.value); 
+        // Automazione stato:
+        if(a.quotaPercent === 0) a.quotaStatus = 'exhausted';
+        else if(a.quotaPercent > 0 && a.quotaStatus === 'exhausted') a.quotaStatus = 'available';
+        
+        save(accounts); 
+        renderAll(); // Forza l'aggiornamento dell'interfaccia (bottone, avviso)
+      }
     });
   });
 }
