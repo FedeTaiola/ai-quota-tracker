@@ -1,47 +1,36 @@
-# ⚡ AI Quota Tracker
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-4.0-brightgreen.svg)
+## Getting Started
 
-**AI Quota Tracker** is a sleek, privacy-first, client-side dashboard designed to help you manage and track the usage quotas, reset cycles, and statuses of all your AI agent accounts (like ChatGPT, Claude, OpenAI Codex, etc.) in one unified interface.
+First, run the development server:
 
-### 🚀 Live Demo
-You can try out the dashboard directly in your browser without downloading anything:
-👉 **[Live Demo on GitHub Pages](https://fedetaiola.github.io/ai-quota-tracker)**
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-*(Note: The demo is fully functional. Any data you enter is saved securely in your own browser's local storage).*
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## ✨ Key Features
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- **🛡️ 100% Privacy-First & Local**: No databases, no servers, no tracking. All data is saved securely in your browser's `localStorage`.
-- **⚙️ Dynamic Custom Services**: Create and track any custom AI service. Customize icons, gradient colors, and specify custom "Free" or "Pro" reset cycle days.
-- **📊 Granular Quota Tracking**: Visual progress bars and countdowns let you know exactly when your limits will reset. Inline sliders allow you to quickly adjust your remaining quota.
-- **🌗 Auto Day/Night Theme**: The UI automatically switches to a sleek dark mode at night and a clean light mode during the day based on your system time.
-- **💾 Import/Export Backups**: Easily export your tracked accounts and custom services to a JSON file to transfer them across devices.
-- **📱 Fully Responsive**: Designed to look beautiful and work flawlessly on desktops, tablets, and smartphones.
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## 🛠️ Installation & Usage
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Since this project runs entirely client-side, setup is instant:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-1. **Clone or Download** this repository to your local machine.
-2. Open the `index.html` file in any modern web browser (Chrome, Firefox, Safari, Edge).
-3. Click the **⚙️ Settings** icon to configure your custom AI services.
-4. Click **+ Aggiungi Account** to start tracking your quotas!
+## Deploy on Vercel
 
-## 🏗️ Architecture
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-The project is built to be fast, lightweight, and maintainable:
-- **`index.html`**: The semantic HTML5 structure.
-- **`css/style.css`**: Pure CSS3 with Flexbox, CSS Grid, and CSS Variables for theming. No heavy frameworks.
-- **`js/app.js`**: Vanilla JavaScript for DOM manipulation, dynamic rendering, and local state management.
-
----
-
-## 👨‍💻 Credits
-
-Designed and developed by **Federico Taiola** with the assistance of Antigravity AI.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

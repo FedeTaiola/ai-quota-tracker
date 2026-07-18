@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/telegram/cron?secret=ai_quota_tracker_secret_2026",
+      "schedule": "0 10 * * *"
+    }
+  ]
+}

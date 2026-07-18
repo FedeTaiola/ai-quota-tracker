@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-base: #0a0b10;
+  --color-bg-surface: #10121a;
+  --color-bg-card: rgba(20, 22, 34, 0.5);
+  --color-bg-modal: #0d0f18;
+  --color-border: #1e2235;
+  --color-border-focus: #6c63ff;
+  --color-text-primary: #e8eaf6;
+  --color-text-secondary: #8892b0;
+  --color-text-muted: #4a5568;
+  --color-ag-from: #6c63ff;
+  --color-ag-to: #a78bfa;
+  --color-cx-from: #06b6d4;
+  --color-cx-to: #22d3ee;
+  --color-ok: #10b981;
+  --color-warn: #f59e0b;
+  --color-danger: #ef4444;
+}
+
+@theme {
+  /* We use custom classes to override the variables */
+}
+
+.light {
+  --color-bg-base: #f8fafc;
+  --color-bg-surface: #ffffff;
+  --color-bg-card: rgba(255, 255, 255, 0.7);
+  --color-bg-modal: #ffffff;
+  --color-border: #e2e8f0;
+  --color-border-focus: #6c63ff;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border, currentColor);
+  }
+
+  body {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* Background glow */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 40% at 15% 20%, rgba(108, 99, 255, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 35% at 85% 75%, rgba(6, 182, 212, 0.09) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glass-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(12px);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #e8eaf6, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
